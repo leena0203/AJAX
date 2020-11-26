@@ -27,7 +27,7 @@
     <div id="post_services"></div>
     <script>
         const getElem = document.querySelector('#get_services');
-        const getURL = "http://127.0.0.1:3000/employees/2";
+        const getURL = "http://127.0.0.1:3000/employees/1";
         makePromiseCall("GET", getURL, true)
             .then(responseText => {
                 getElem.textContent = "Get User data: " + responseText;
@@ -46,7 +46,7 @@
             });
         const postElem = document.querySelector('#post_services');
         const postURL = "http://127.0.0.1:3000/employees";
-        const emplData = { "name": "Harry", "salary": "5000" };
+        const emplData = {"name": "Harry", "salary": "5000"};
         makePromiseCall("POST", postURL, true, emplData)
             .then(responseText => {
                 postElem.textContent = "User Added :  " + responseText;
